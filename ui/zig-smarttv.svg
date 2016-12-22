@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" version="1.1" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" viewBox="0 0 32 32">
+<metadata>
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<dc:title/>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<g transform="matrix(1.1126577,0,0,1.1126577,-1.5175744,-1136.8314)">
+<g fill-opacity="0.69411765" transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,-728.13243,306.3719)">
+<rect style="color:#000000;enable-background:accumulate;" height="10" width="10" y="1032" x="0" fill="#990963"/>
+<rect style="color:#000000;enable-background:accumulate;" height="10" width="10" y="1032" x="10" fill="#668938"/>
+<rect style="color:#000000;enable-background:accumulate;" height="10" width="10" y="1042" x="0" fill="#f29200"/>
+<rect style="color:#000000;enable-background:accumulate;" height="10" width="10" y="1042" x="10" fill="#32b3ca"/>
+</g>
+</g>
+</svg>

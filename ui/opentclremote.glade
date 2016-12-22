@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.18.3 -->
+<interface>
+  <requires lib="gtk+" version="3.12"/>
+  <object class="GtkImage" id="imgBack">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">arrow_back.svg</property>
+  </object>
+  <object class="GtkImage" id="imgBlue">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">zig-square-blue.svg</property>
+  </object>
+  <object class="GtkImage" id="imgDown">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">arrow_carrot-down_alt.svg</property>
+  </object>
+  <object class="GtkImage" id="imgEco">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">awe-eco.svg</property>
+  </object>
+  <object class="GtkImage" id="imgExit">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">awe-exit.svg</property>
+  </object>
+  <object class="GtkImage" id="imgFavorite">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">icon_star.svg</property>
+  </object>
+  <object class="GtkImage" id="imgGreen">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">zig-square-green.svg</property>
+  </object>
+  <object class="GtkImage" id="imgGuide">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">icon_book.svg</property>
+  </object>
+  <object class="GtkImage" id="imgInfo">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">awe-info.svg</property>
+  </object>
+  <object class="GtkImage" id="imgLeft">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">arrow_carrot-left_alt.svg</property>
+  </object>
+  <object class="GtkImage" id="imgList">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">icon_ol.svg</property>
+  </object>
+  <object class="GtkImage" id="imgMenu">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">icon_menu.svg</property>
+  </object>
+  <object class="GtkImage" id="imgOk">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">icon_check.svg</property>
+  </object>
+  <object class="GtkImage" id="imgOption">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">icon_adjust-horiz.svg</property>
+  </object>
+  <object class="GtkImage" id="imgPrgMinus">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">icon_minus_alt.svg</property>
+  </object>
+  <object class="GtkImage" id="imgPrgPlus">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">icon_plus_alt.svg</property>
+  </object>
+  <object class="GtkImage" id="imgRed">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">zig-square-red.svg</property>
+  </object>
+  <object class="GtkImage" id="imgRight">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">arrow_carrot-right_alt.svg</property>
+  </object>
+  <object class="GtkImage" id="imgSmartTV">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">zig-smarttv.svg</property>
+  </object>
+  <object class="GtkImage" id="imgSource">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">awe-source.svg</property>
+  </object>
+  <object class="GtkImage" id="imgUp">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">arrow_carrot_up_alt.svg</property>
+  </object>
+  <object class="GtkImage" id="imgVolumeHigh">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">icon_volume-high.svg</property>
+  </object>
+  <object class="GtkImage" id="imgVolumeLow">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">icon_volume-low.svg</property>
+  </object>
+  <object class="GtkImage" id="imgVolumeMute">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">icon_vol-mute.svg</property>
+  </object>
+  <object class="GtkImage" id="imgYellow">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">zig-square-yellow.svg</property>
+  </object>
+  <object class="GtkImage" id="imgZoomMinus">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">icon_zoom-out_alt.svg</property>
+  </object>
+  <object class="GtkImage" id="imgZoomPlus">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="pixbuf">icon_zoom-in_alt.svg</property>
+  </object>
+  <object class="GtkWindow" id="winRemote">
+    <property name="name"> </property>
+    <property name="can_focus">False</property>
+    <property name="title" translatable="yes">OpenTCLRemote</property>
+    <property name="resizable">False</property>
+    <property name="window_position">mouse</property>
+    <property name="startup_id">OpenTCLRemote</property>
+    <signal name="delete-event" handler="onDeleteWindow" swapped="no"/>
+    <signal name="key-press-event" handler="onKeyPressed" swapped="no"/>
+    <child>
+      <object class="GtkBox" id="boxSections">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="margin_left">16</property>
+        <property name="margin_right">16</property>
+        <property name="margin_top">16</property>
+        <property name="margin_bottom">16</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">16</property>
+        <child>
+          <object class="GtkGrid" id="grdNumbers">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="row_homogeneous">True</property>
+            <property name="column_homogeneous">True</property>
+            <child>
+              <object class="GtkButton" id="btn1">
+                <property name="label" translatable="yes">1</property>
+                <property name="name">TR_KEY_1</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="1" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn2">
+                <property name="label" translatable="yes">2</property>
+                <property name="name">TR_KEY_2</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="2" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn3">
+                <property name="label" translatable="yes">3</property>
+                <property name="name">TR_KEY_3</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="3" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn4">
+                <property name="label" translatable="yes">4</property>
+                <property name="name">TR_KEY_4</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="4" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn5">
+                <property name="label" translatable="yes">5</property>
+                <property name="name">TR_KEY_5</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="5" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn6">
+                <property name="label" translatable="yes">6</property>
+                <property name="name">TR_KEY_6</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="6" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn7">
+                <property name="label" translatable="yes">7</property>
+                <property name="name">TR_KEY_7</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="7" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn8">
+                <property name="label" translatable="yes">8</property>
+                <property name="name">TR_KEY_8</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="8" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn9">
+                <property name="label" translatable="yes">9</property>
+                <property name="name">TR_KEY_9</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="9" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnEco">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgEco</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btn0">
+                <property name="label" translatable="yes">0</property>
+                <property name="name">TR_KEY_ECO</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="0" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnSource">
+                <property name="label" translatable="yes">F2</property>
+                <property name="name">TR_KEY_SOURCE</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgSource</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="F2" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">3</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkGrid" id="grdSoundAndProgram">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="row_homogeneous">True</property>
+            <property name="column_homogeneous">True</property>
+            <child>
+              <object class="GtkButton" id="btnVolumeHigh">
+                <property name="label" translatable="yes">Alt +</property>
+                <property name="name">TR_KEY_VOL_UP</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgVolumeHigh</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="KP_Add" signal="clicked" modifiers="GDK_MOD1_MASK"/>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnVolumeMute">
+                <property name="label" translatable="yes">*</property>
+                <property name="name">TR_KEY_MUTE</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgVolumeMute</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="asterisk" signal="clicked"/>
+                <accelerator key="KP_Multiply" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnPrgPlus">
+                <property name="name">TR_KEY_CH_UP</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgPrgPlus</property>
+                <property name="yalign">0.49000000953674316</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="KP_Add" signal="clicked"/>
+                <accelerator key="plus" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnVolumeLow">
+                <property name="label" translatable="yes">Alt -</property>
+                <property name="name">TR_KEY_VOL_DOWN</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgVolumeLow</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="KP_Subtract" signal="clicked" modifiers="GDK_MOD1_MASK"/>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnInfo">
+                <property name="name">TR_KEY_INFOWINDOW</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgInfo</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="i" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnPrgMinus">
+                <property name="name">TR_KEY_CH_DOWN</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgPrgMinus</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="KP_Subtract" signal="clicked"/>
+                <accelerator key="minus" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="grdOptionAndGuide">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkButton" id="btnOption">
+                <property name="label" translatable="yes">Alt+F10</property>
+                <property name="name">TR_KEY_OPTION</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgOption</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="F10" signal="clicked" modifiers="GDK_MOD1_MASK"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnSmartTV">
+                <property name="name">TR_KEY_SMARTTV</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgSmartTV</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnGuide">
+                <property name="label" translatable="yes">F1</property>
+                <property name="name">TR_KEY_GUIDE</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgGuide</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="F1" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkGrid" id="imgArrows">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="row_homogeneous">True</property>
+            <property name="column_homogeneous">True</property>
+            <child>
+              <object class="GtkButton" id="btnMenu">
+                <property name="label" translatable="yes">F10</property>
+                <property name="name">TR_KEY_MAINMENU</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgMenu</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="F10" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnUp">
+                <property name="name">TR_KEY_UP</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgUp</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="Up" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnOk">
+                <property name="label" translatable="yes">Enter</property>
+                <property name="name">TR_KEY_OK</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgOk</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="KP_Enter" signal="clicked"/>
+                <accelerator key="Return" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnLeft">
+                <property name="name">TR_KEY_LEFT</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgLeft</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnRight">
+                <property name="name">TR_KEY_RIGHT</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgRight</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnBack">
+                <property name="label" translatable="yes">Backspace</property>
+                <property name="name">TR_KEY_BACK</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgBack</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnDown">
+                <property name="name">TR_KEY_DOWN</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgDown</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">True</property>
+            <property name="fill">True</property>
+            <property name="position">3</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="boxZoom">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkButton" id="btnExit">
+                <property name="label" translatable="yes">Esc</property>
+                <property name="name">TR_KEY_EXIT</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgExit</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnZoomMinus">
+                <property name="label" translatable="yes">Ctrl -</property>
+                <property name="name">TR_KEY_ZOOM_DOWN</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgZoomMinus</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="KP_Subtract" signal="clicked" modifiers="GDK_CONTROL_MASK"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnZoomPlus">
+                <property name="label" translatable="yes">Ctrl +</property>
+                <property name="name">TR_KEY_ZOOM_UP</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgZoomPlus</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="KP_Add" signal="clicked" modifiers="GDK_CONTROL_MASK"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnList">
+                <property name="name">TR_KEY_LIST</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgList</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">4</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="boxFavorites">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkButton" id="btnSleep">
+                <property name="label" translatable="yes">sleep</property>
+                <property name="name">TR_KEY_SLEEP</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnPreCh">
+                <property name="label" translatable="yes">pre-ch</property>
+                <property name="name">TR_KEY_PRE_CH</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="xalign">0.52999997138977051</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnFavorite">
+                <property name="name">TR_KEY_FAVORITE</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgFavorite</property>
+                <property name="yalign">0.49000000953674316</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnRecord">
+                <property name="label" translatable="yes">record</property>
+                <property name="name">TR_KEY_REC</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">5</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkBox" id="boxColors">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkButton" id="btnRed">
+                <property name="label" translatable="yes">F5</property>
+                <property name="name">TR_KEY_RED</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgRed</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="F5" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnGreen">
+                <property name="label" translatable="yes">F6</property>
+                <property name="name">TR_KEY_GREEN</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgGreen</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="F6" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnYellow">
+                <property name="label" translatable="yes">F7</property>
+                <property name="name">TR_KEY_YELLOW</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgYellow</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="F7" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="btnBlue">
+                <property name="label" translatable="yes">F8</property>
+                <property name="name">TR_KEY_BLUE</property>
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="image">imgBlue</property>
+                <property name="image_position">top</property>
+                <property name="always_show_image">True</property>
+                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <accelerator key="F8" signal="clicked"/>
+              </object>
+              <packing>
+                <property name="expand">False</property>
+                <property name="fill">True</property>
+                <property name="position">3</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">6</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkLabel" id="lblFriendlyName">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="label" translatable="yes">OpenTCLRemote</property>
+            <property name="justify">center</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">7</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>
