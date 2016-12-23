@@ -143,6 +143,7 @@
     <property name="title" translatable="yes">OpenTCLRemote</property>
     <property name="resizable">False</property>
     <property name="window_position">mouse</property>
+    <property name="icon">zig-opentclremote-icon.svg</property>
     <property name="startup_id">OpenTCLRemote</property>
     <signal name="delete-event" handler="onDeleteWindow" swapped="no"/>
     <signal name="key-press-event" handler="onKeyPressed" swapped="no"/>
@@ -386,8 +387,8 @@
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
                 <signal name="clicked" handler="onButtonClicked" swapped="no"/>
-                <accelerator key="asterisk" signal="clicked"/>
                 <accelerator key="KP_Multiply" signal="clicked"/>
+                <accelerator key="asterisk" signal="clicked"/>
               </object>
               <packing>
                 <property name="left_attach">1</property>
@@ -403,8 +404,8 @@
                 <property name="image">imgPrgPlus</property>
                 <property name="yalign">0.49000000953674316</property>
                 <signal name="clicked" handler="onButtonClicked" swapped="no"/>
-                <accelerator key="KP_Add" signal="clicked"/>
                 <accelerator key="plus" signal="clicked"/>
+                <accelerator key="KP_Add" signal="clicked"/>
               </object>
               <packing>
                 <property name="left_attach">2</property>
@@ -452,8 +453,8 @@
                 <property name="receives_default">True</property>
                 <property name="image">imgPrgMinus</property>
                 <signal name="clicked" handler="onButtonClicked" swapped="no"/>
-                <accelerator key="KP_Subtract" signal="clicked"/>
                 <accelerator key="minus" signal="clicked"/>
+                <accelerator key="KP_Subtract" signal="clicked"/>
               </object>
               <packing>
                 <property name="left_attach">2</property>
@@ -584,8 +585,8 @@
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
                 <signal name="clicked" handler="onButtonClicked" swapped="no"/>
-                <accelerator key="KP_Enter" signal="clicked"/>
                 <accelerator key="Return" signal="clicked"/>
+                <accelerator key="KP_Enter" signal="clicked"/>
               </object>
               <packing>
                 <property name="left_attach">1</property>
