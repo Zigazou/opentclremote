@@ -145,8 +145,8 @@
     <property name="window_position">mouse</property>
     <property name="icon">zig-opentclremote-icon.svg</property>
     <property name="startup_id">OpenTCLRemote</property>
-    <signal name="delete-event" handler="onDeleteWindow" swapped="no"/>
-    <signal name="key-press-event" handler="onKeyPressed" swapped="no"/>
+    <signal name="delete-event" handler="on_delete_window" swapped="no"/>
+    <signal name="key-press-event" handler="on_key_pressed" swapped="no"/>
     <child>
       <object class="GtkBox" id="boxSections">
         <property name="visible">True</property>
@@ -170,8 +170,8 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="1" signal="clicked"/>
               </object>
               <packing>
@@ -186,7 +186,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="2" signal="clicked"/>
               </object>
               <packing>
@@ -201,7 +201,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="3" signal="clicked"/>
               </object>
               <packing>
@@ -216,7 +216,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="4" signal="clicked"/>
               </object>
               <packing>
@@ -231,7 +231,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="5" signal="clicked"/>
               </object>
               <packing>
@@ -246,7 +246,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="6" signal="clicked"/>
               </object>
               <packing>
@@ -261,7 +261,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="7" signal="clicked"/>
               </object>
               <packing>
@@ -276,7 +276,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="8" signal="clicked"/>
               </object>
               <packing>
@@ -291,7 +291,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="9" signal="clicked"/>
               </object>
               <packing>
@@ -305,7 +305,7 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="image">imgEco</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="left_attach">0</property>
@@ -319,7 +319,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="0" signal="clicked"/>
               </object>
               <packing>
@@ -337,7 +337,7 @@
                 <property name="image">imgSource</property>
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="F2" signal="clicked"/>
               </object>
               <packing>
@@ -368,7 +368,7 @@
                 <property name="image">imgVolumeHigh</property>
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="KP_Add" signal="clicked" modifiers="GDK_MOD1_MASK"/>
               </object>
               <packing>
@@ -386,7 +386,7 @@
                 <property name="image">imgVolumeMute</property>
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="KP_Multiply" signal="clicked"/>
                 <accelerator key="asterisk" signal="clicked"/>
               </object>
@@ -403,7 +403,7 @@
                 <property name="receives_default">True</property>
                 <property name="image">imgPrgPlus</property>
                 <property name="yalign">0.49000000953674316</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="plus" signal="clicked"/>
                 <accelerator key="KP_Add" signal="clicked"/>
               </object>
@@ -422,7 +422,7 @@
                 <property name="image">imgVolumeLow</property>
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="KP_Subtract" signal="clicked" modifiers="GDK_MOD1_MASK"/>
               </object>
               <packing>
@@ -437,7 +437,7 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="image">imgInfo</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="i" signal="clicked"/>
               </object>
               <packing>
@@ -452,7 +452,7 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="image">imgPrgMinus</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="minus" signal="clicked"/>
                 <accelerator key="KP_Subtract" signal="clicked"/>
               </object>
@@ -483,7 +483,7 @@
                 <property name="image">imgOption</property>
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="F10" signal="clicked" modifiers="GDK_MOD1_MASK"/>
               </object>
               <packing>
@@ -501,7 +501,7 @@
                 <property name="image">imgSmartTV</property>
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -519,7 +519,7 @@
                 <property name="image">imgGuide</property>
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="F1" signal="clicked"/>
               </object>
               <packing>
@@ -551,7 +551,7 @@
                 <property name="image">imgMenu</property>
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="F10" signal="clicked"/>
               </object>
               <packing>
@@ -566,7 +566,7 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="image">imgUp</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="Up" signal="clicked"/>
               </object>
               <packing>
@@ -584,7 +584,7 @@
                 <property name="image">imgOk</property>
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="Return" signal="clicked"/>
                 <accelerator key="KP_Enter" signal="clicked"/>
               </object>
@@ -600,7 +600,7 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="image">imgLeft</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="left_attach">0</property>
@@ -614,7 +614,7 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="image">imgRight</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="left_attach">2</property>
@@ -631,7 +631,7 @@
                 <property name="image">imgBack</property>
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="left_attach">0</property>
@@ -645,7 +645,7 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="image">imgDown</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="left_attach">1</property>
@@ -680,7 +680,7 @@
                 <property name="image">imgExit</property>
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -698,7 +698,7 @@
                 <property name="image">imgZoomMinus</property>
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="KP_Subtract" signal="clicked" modifiers="GDK_CONTROL_MASK"/>
               </object>
               <packing>
@@ -717,7 +717,7 @@
                 <property name="image">imgZoomPlus</property>
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="KP_Add" signal="clicked" modifiers="GDK_CONTROL_MASK"/>
               </object>
               <packing>
@@ -733,7 +733,7 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="image">imgList</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -760,7 +760,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -776,7 +776,7 @@
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
                 <property name="xalign">0.52999997138977051</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -792,7 +792,7 @@
                 <property name="receives_default">True</property>
                 <property name="image">imgFavorite</property>
                 <property name="yalign">0.49000000953674316</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -807,7 +807,7 @@
                 <property name="visible">True</property>
                 <property name="can_focus">True</property>
                 <property name="receives_default">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
               </object>
               <packing>
                 <property name="expand">False</property>
@@ -837,7 +837,7 @@
                 <property name="image">imgRed</property>
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="F5" signal="clicked"/>
               </object>
               <packing>
@@ -856,7 +856,7 @@
                 <property name="image">imgGreen</property>
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="F6" signal="clicked"/>
               </object>
               <packing>
@@ -875,7 +875,7 @@
                 <property name="image">imgYellow</property>
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="F7" signal="clicked"/>
               </object>
               <packing>
@@ -894,7 +894,7 @@
                 <property name="image">imgBlue</property>
                 <property name="image_position">top</property>
                 <property name="always_show_image">True</property>
-                <signal name="clicked" handler="onButtonClicked" swapped="no"/>
+                <signal name="clicked" handler="on_button_clicked" swapped="no"/>
                 <accelerator key="F8" signal="clicked"/>
               </object>
               <packing>

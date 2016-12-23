@@ -1,24 +1,26 @@
 #!/usr/bin/env python3
-import gi
-gi.require_version('Gtk', '3.0')
-from gi.repository import Gtk, Gdk, Wnck
-
+"""OpenTCLRemote is a GUI that lets you control a TCL tv set from your computer.
+"""
 from socket import (socket, AF_INET, SOCK_DGRAM, SOCK_STREAM, IPPROTO_IP,
-    IPPROTO_UDP, IP_ADD_MEMBERSHIP, inet_aton, INADDR_ANY, SOL_SOCKET,
-    SO_REUSEADDR, IP_MULTICAST_TTL)
+                    IPPROTO_UDP, IP_ADD_MEMBERSHIP, inet_aton, INADDR_ANY,
+                    SOL_SOCKET, SO_REUSEADDR, IP_MULTICAST_TTL)
 import threading
 
-# Imports required by findTCLtv
 import select
 import struct
 import re
 from urllib.request import urlopen
 
-def findTCLtv():
-    import time
+import gi
+gi.require_version('Gtk', '3.0')
+from gi.repository import Gtk, Gdk, Wnck
+
+def find_tcl_tv():
     """The findTCLtv function uses the UPnP protocol to find the IP address of
        the first TCL tv set available.
     """
+    import time
+
     # Setup client socket which will send the discovery message
     clnt = socket(AF_INET, SOCK_DGRAM)
     clnt.setsockopt(IPPROTO_IP, IP_MULTICAST_TTL, 2)
@@ -30,7 +32,7 @@ def findTCLtv():
     srvr.setsockopt(SOL_SOCKET, SO_REUSEADDR, 1)
     srvr.bind(('', 1900))
 
-    for attempt in range(1, 10):
+    for _ in range(1, 10):
         # Send discovery message
         print("Sending M-SEARCH discovery message")
         msearch = ("M-SEARCH * HTTP/1.1\r\nHOST:239.255.255.250:1900\r\n"
@@ -46,26 +48,27 @@ def findTCLtv():
 
             # The packet must contain a LOCATION field
             location = re.search(r'LOCATION: ([^\r]*)', response)
-            if location == None:
+            if location is None:
                 print("It has no LOCATION")
                 continue
 
-            descUrl = location.group(1)
+            desc_url = location.group(1)
 
             # The LOCATION field must contain an IPv4 address
-            address = re.search(r'[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+', descUrl)
+            address = re.search(r'[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+', desc_url)
 
-            if address == None:
+            if address is None:
                 print("It has no IPv4 address")
                 continue
 
-            ipAddress = address.group(0)
+            ip_address = address.group(0)
 
             # Download the description according to the LOCATION field
-            rsp = urlopen(descUrl).read().decode('utf-8')
+            rsp = urlopen(desc_url).read().decode('utf-8')
+            print(rsp)
 
-            # The description must contain friendlyName and manufacturer tags
-            friendlyName = re.search(
+            # The description must contain friendly_name and manufacturer tags
+            friendly_name = re.search(
                 r'<friendlyName>([^<]*)</friendlyName>',
                 rsp
             )
@@ -75,7 +78,7 @@ def findTCLtv():
                 rsp
             )
 
-            if manufacturer == None or friendlyName == None:
+            if manufacturer is None or friendly_name is None:
                 print("It has no friendly or manufacturer name")
                 continue
 
@@ -86,7 +89,7 @@ def findTCLtv():
             # A TCL tv set has been found!
             srvr.close()
             clnt.close()
-            return (ipAddress, friendlyName.group(1))
+            return (ip_address, friendly_name.group(1))
 
         time.sleep(1)
 
@@ -94,8 +97,8 @@ def findTCLtv():
     clnt.close()
     return None
 
-def createAction(keyCode):
-    """Given a keyCode, the createAction function generates the XML string
+def create_action(key_code):
+    """Given a key_code, the create_action function generates the XML string
        in the correct format for the TV set.
     """
     message = ('<?xml version="1.0" encoding="utf-8"?>'
@@ -104,41 +107,49 @@ def createAction(keyCode):
                '</root>'
               )
 
-    return message.format(keyCode)
+    return message.format(key_code)
 
 class RemoteController:
     """The RemoteController class handles communications between this program
        and the TV set on a local network.
     """
-    def __init__(self, host, friendlyName):
+    def __init__(self, host, friendly_name):
         self.sock = socket(AF_INET, SOCK_STREAM)
         self.sock.connect((host, 4123))
-        self.keepAlive = None
-        self.startKeepAlive()
-        self.friendlyName = friendlyName
+        self.keep_alive = None
+        self.start_keep_alive()
+        self.friendly_name = friendly_name
 
-    def startKeepAlive(self):
+    def start_keep_alive(self):
+        """Method run periodically allowing to keep the connection open
+        """
         # If a message is not sent regularly, the TV will close the socket
         self.sock.send('nop'.encode('utf-8'))
         self.sock.recv(2048)
 
-        self.keepAlive = threading.Timer(20.0, self.startKeepAlive)
-        self.keepAlive.start()
+        self.keep_alive = threading.Timer(20.0, self.start_keep_alive)
+        self.keep_alive.start()
 
     def close(self):
-        if self.keepAlive != None:
-            self.keepAlive.cancel()
+        """This method must be called before exiting the application because
+           otherwise it will continue forever, blocking the Python interpreter
+           from exiting.
+        """
+        if self.keep_alive != None:
+            self.keep_alive.cancel()
 
-    def pressKey(self, keyCode):
+    def press_key(self, key_code):
+        """Emulates a key press by sending a message to the TV set.
+        """
         # Messages will always be smaller than buffer size
-        self.sock.send(createAction(keyCode).encode('utf-8'))
+        self.sock.send(create_action(key_code).encode('utf-8'))
         self.sock.recv(2048)
 
 class RemoteHandlers:
     """The RemoteHandlers class handles events fired by the GUI.
     """
-    def __init__(self, remote):
-        self.remote = remote
+    def __init__(self, remote_controller):
+        self.remote_controller = remote_controller
 
         # The following keys cannot be specified as accelerators
         self.keys = {
@@ -149,38 +160,53 @@ class RemoteHandlers:
             Gdk.KEY_Escape: 'TR_KEY_EXIT',
             Gdk.KEY_BackSpace: 'TR_KEY_BACK',
         }
-    
-    def onDeleteWindow(self, *args):
-        self.remote.close()
+
+    def on_delete_window(self, *args):
+        """Handles the delete-window message in order to properly close the
+           remote controller and quit the main loop.
+        """
+        self.remote_controller.close()
         Gtk.main_quit(*args)
 
-    def onKeyPressed(self, widget, event):
+    def on_key_pressed(self, _, event):
+        """Handles keys that cannot be specified as accelerators
+        """
         # Handles specific keys in a non standard way
         if event.keyval in self.keys:
-            self.remote.pressKey(self.keys[event.keyval])
+            self.remote_controller.press_key(self.keys[event.keyval])
             return True
 
-    def onButtonClicked(self, button):
+    def on_button_clicked(self, button):
+        """Handles click of each button of the GUI
+        """
         # Dirty trick: use the graphic name as the key code
-        self.remote.pressKey(button.get_name())
+        self.remote_controller.press_key(button.get_name())
 
 class RemoteGUI:
     """The RemoteGUI class is responsible of loading and displaying the GUI.
     """
-    def __init__(self, remote):
+    def __init__(self, remote_controller):
+        self.remote_controller = remote_controller
+        self.init_window()
+
+    def init_window(self):
+        """Initializes the window by loading it from a Glade file
+        """
         self.builder = Gtk.Builder()
         self.builder.add_from_file("ui/opentclremote.glade")
 
-        self.winRemote = self.builder.get_object("winRemote")
-        lblFriendlyName = self.builder.get_object("lblFriendlyName")
-        lblFriendlyName.set_text(remote.friendlyName)
-        self.builder.connect_signals(RemoteHandlers(remote))
+        self.win_remote = self.builder.get_object("winRemote")
+        lbl_friendly_name = self.builder.get_object("lblFriendlyName")
+        lbl_friendly_name.set_text(self.remote_controller.friendly_name)
+        self.builder.connect_signals(RemoteHandlers(self.remote_controller))
 
     def run(self):
-        self.winRemote.show_all()
+        """Launch the window
+        """
+        self.win_remote.show_all()
         Gtk.main()
 
-def activateOpenTCLRemoteWindow():
+def activate_open_tcl_remote_window():
     """The activateOpenTCLRemoteWindow function looks for an instance of the
        OpenTCLRemote window and activates it (gives it the focus) if found.
        Returns True if found, False if not found
@@ -205,16 +231,20 @@ def activateOpenTCLRemoteWindow():
 
     return found
 
-if __name__ == "__main__":
-    if activateOpenTCLRemoteWindow():
+def main():
+    """Main function
+    """
+    if activate_open_tcl_remote_window():
         print("Giving the focus to the already existing instance")
     else:
         print("Launching a new instance")
-        tv = findTCLtv()
-        if tv == None:
+        tcl_tv = find_tcl_tv()
+        if tcl_tv is None:
             print("No TCL tv found!")
         else:
-            print("TCL tv found at " + tv[0])
-            remote = RemoteController(tv[0], tv[1])
-            RemoteGUI(remote).run()
+            print("TCL tv found at " + tcl_tv[0])
+            remote_controller = RemoteController(tcl_tv[0], tcl_tv[1])
+            RemoteGUI(remote_controller).run()
 
+if __name__ == "__main__":
+    main()
